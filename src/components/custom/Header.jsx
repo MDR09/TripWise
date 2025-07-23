@@ -97,7 +97,7 @@ function Header() {
             <DialogContent>
               <DialogHeader>
                 <DialogDescription>
-                  <img src="/assets/logo.svg" width={150} />
+                  <img src="/logo.png" width={150} />
 
                   <DialogClose onClick={() => {
                     console.log('Closing dialog');
