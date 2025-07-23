@@ -58,7 +58,7 @@ function CreateTrip() {
         }
         setLoading(true);
         const FINAL_PROMPT=AI_PROMPT
-        .replace('{location}',formData?.location?.address?.city)
+        .replace('{location}',formData?.location?.address?.name)
         .replace('{totalDays}',formData?.noOfDays)
         .replace('{budget}',formData?.budget)
         .replace('{people}',formData?.traveler)
