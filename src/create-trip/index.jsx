@@ -161,25 +161,29 @@ function CreateTrip() {
                     </Button>
                 </div>
 
-                <Dialog open={openDialog}>
-                    
-                    <DialogContent>
-                        <DialogHeader>
-                            
-                            <DialogDescription>
-                                <img src="/logo.png"/>
-                                <h2 className='font-bold text-lg mt-7'>Sign In With Google</h2>
-                                <p>Sign in to the App with Google authentication securely </p>
-                                <Button 
-                                onClick={login}
-                                className='w-full mt-5 flex gap-3 items-center'>
-                                    <FcGoogle className='w-7'/> 
-                                    Sign In With Google
-                                    </Button>     
-                            </DialogDescription>
-                        </DialogHeader>
-                    </DialogContent>
-                </Dialog>
+                {openDialog && (
+                    <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+                        <DialogContent>
+                            <DialogHeader>
+                                <DialogDescription>
+                                    <img src="/logo.png" width={60} />
+
+                                    <h2 className='font-bold text-lg mt-5'>Continue with Google Authentication</h2>
+
+                                    <Button
+                                        onClick={login}
+                                        className="w-full mt-5 bg-[#462F26] text-white hover:border-[#291813] flex gap-2 items-center"
+                                    >
+                                        <FcGoogle className="w-6" />
+                                        Sign In With Google
+                                    </Button>
+                                </DialogDescription>
+                            </DialogHeader>
+                        </DialogContent>
+                    </Dialog>
+                )}
+
+
             </div>
         </div>
     )
